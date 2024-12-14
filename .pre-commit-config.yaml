@@ -15,7 +15,8 @@ repos:
     hooks:
       - id: ruff
         args: [--fix]
-        exclude: ^.*/Tiltfile$
+        files: ^.*Tiltfile|^.*\.py$
+        types_or: [text]
   - repo: https://github.com/shellcheck-py/shellcheck-py
     rev: v0.10.0.1
     hooks:
